@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlannerApp", "PlannerApp\PlannerApp.csproj", "{31F5C7FE-AD18-4036-9F1B-DE6BC79F308D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlannetApp.Shared", "PlannetApp.Shared\PlannetApp.Shared.csproj", "{B1767E06-66ED-4B26-8345-4940C330114D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlannetApp.Shared", "PlannetApp.Shared\PlannetApp.Shared.csproj", "{B1767E06-66ED-4B26-8345-4940C330114D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
