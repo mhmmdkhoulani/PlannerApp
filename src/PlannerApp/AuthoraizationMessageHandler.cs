@@ -21,6 +21,7 @@ namespace PlannerApp
                 var token = await _storage.GetItemAsStringAsync("access_token");
                 request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
             }
+            System.Console.WriteLine("Authoraization message handler called");
             return await base.SendAsync(request, cancellationToken);
         }
 
