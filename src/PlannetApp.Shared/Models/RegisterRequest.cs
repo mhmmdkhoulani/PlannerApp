@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PlannetApp.Shared.Models
 {
-    public class RegisteRequert
+    public class RegisterRequest
     {
         
         public string Email { get; set; }

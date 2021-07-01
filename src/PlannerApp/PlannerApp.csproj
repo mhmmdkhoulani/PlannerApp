@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PlannerApp.Client.Services\PlannerApp.Client.Services.csproj" />
     <ProjectReference Include="..\PlannetApp.Shared\PlannetApp.Shared.csproj" />
   </ItemGroup>
 

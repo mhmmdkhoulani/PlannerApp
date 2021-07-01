@@ -1,4 +1,5 @@
-﻿using PlannetApp.Shared.Responses;
+﻿using PlannetApp.Shared.Models;
+using PlannetApp.Shared.Responses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace PlannerApp.Client.Services.Interfaces
 {
     public interface IAuthenticationService
     {
-        Task<ApiResponse> RegisterUserRequsertAsync(RegisterRequest)
+        Task<ApiResponse> RegisterUserRequsertAsync(RegisterRequest model);
     }
 }

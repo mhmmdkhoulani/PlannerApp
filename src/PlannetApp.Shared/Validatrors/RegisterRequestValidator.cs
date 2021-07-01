@@ -6,7 +6,7 @@ using System.Text;
 
 namespace PlannetApp.Shared.Validatrors
 {
-    public class RegisterRequestValidator : AbstractValidator<RegisteRequest>
+    public class RegisterRequestValidator : AbstractValidator<RegisterRequest>
     {
         public RegisterRequestValidator()
         {
