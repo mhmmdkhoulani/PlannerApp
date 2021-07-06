@@ -21,12 +21,12 @@ namespace PlannerApp.Client.Services
             _httpClient = httpClient;
         }
 
-        public async Task<ApiResponse<PageList<PlanSummary>>> GetPlansAsync(string query = null, int pageSize = 10, int pageNumber = 1)
+        public async Task<ApiResponse<PagedList<PlanSummary>>> GetPlansAsync(string query = null, int pageNumber = 10, int pageSize = 1)
         {
-            var response = await _httpClient.GetAsync($"/api/v2/plans?query={query}&pagenumber={pageNumber}&pagesize={pageSize}");
+            var response = await _httpClient.GetAsync($"/api/v2/plans?query={query}&pageNumber={pageNumber}&pageSize={pageSize}");
             if (response.IsSuccessStatusCode)
             {
-                var result = await response.Content.ReadFromJsonAsync<ApiResponse<PageList<PlanSummary>>>();
+                var result = await response.Content.ReadFromJsonAsync<ApiResponse<PagedList<PlanSummary>>>();
                 return result;
             }
             else
