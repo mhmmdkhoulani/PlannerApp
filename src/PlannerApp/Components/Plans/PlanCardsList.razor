@@ -1,5 +1,13 @@
 ﻿@namespace PlannerApp.Components
 
+<MudPaper Class="py-1 px-2 my-4" Elevation="0">
+    <div class="d-flex">
+        <MudTextField @bind-Value="_query" Variant="Variant.Outlined" />
+        <MudIconButton Icon="@Icons.Material.Filled.Search" Size="Size.Large" Class="ma-2"  OnClick="async () => await GetPlansAsync(1)"></MudIconButton>
+        
+    </div>
+</MudPaper>
+
 @if (_isBusy)
 {
     <MudGrid>
@@ -25,3 +33,13 @@ else
     }
 </MudGrid>
 }
+
+<div class="d-flex justify-center py-2 px-1">
+    @for (int i = 1; i <= _result.TotalPages; i++)
+    { 
+        int index = i;
+        <MudButton Variant="Variant.Outlined" Size="Size.Small" Color="Color.Primary" Class="ma-2" 
+                   OnClick="async () => await GetPlansAsync(index)" Disabled="@(_pageNumber == index)">@index</MudButton>
+    }
+
+</div> 
